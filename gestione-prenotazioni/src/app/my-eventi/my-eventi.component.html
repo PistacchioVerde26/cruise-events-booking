@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-md-12">
+        <h4>I tuoi venti prenotati</h4>
+        <app-prenotazione 
+        *ngFor="let prenotazioneItem of (prenotazioniState | async).prenotazioni"
+        [prenotazione]="prenotazioneItem"></app-prenotazione>
+    </div>
+</div>
+

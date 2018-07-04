@@ -1,0 +1,23 @@
+<div class="row">
+  <!-- <span class="pull-right"> -->
+  <div class="col-lg-4">
+    <span>
+      <img [src]="replica.evento.imagePath" class="img-responsive" style="max-height: 100px">
+    </span>
+  </div>
+  <div class="col-lg-6">
+    <h5>{{replica.evento.titolo}}</h5>
+    <p>{{ (replica.data*1000) | date:fullDate }}</p>
+    <p>Posti {{ replica.postioccupati }}/{{replica.evento.locale.posti}}</p>
+  </div>
+  <div class="col-lg-2" *ngIf="(authState | async).authenticated">
+    <form class="form-group" (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <label for="biglietti">N. Biglietti</label>
+      <input type="number" id="biglietti" class="form-control" 
+        value="0" name="biglietti" ngModel value="0">
+      <button class="btn btn-success" style="margin-top: 10px"
+        type="submit">Prenota</button>
+    </form>
+  </div>
+</div>
+<hr>

@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title">
+                    {{prenotazione.replica.evento.titolo}}
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>
+                            <img [src]="prenotazione.replica.evento.imagePath" class="img-responsive" style="max-height: 150px">
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Data: {{ (prenotazione.replica.data) | date:fullDate }}</p>
+                        <p>Biglietti acquistati: {{ prenotazione.biglietti }}</p>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
